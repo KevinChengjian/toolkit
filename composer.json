@@ -20,5 +20,12 @@
         "psr-4": {
             "Kevinchengjian\\Toolkit\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kevinchengjian\\Toolkit\\KevinBasicServiceProvider"
+            ]
+        }
     }
 }

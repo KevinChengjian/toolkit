@@ -1,6 +1,6 @@
 <?php
 
-namespace Kevin\Basic;
+namespace Kevinchengjian\Toolkit;
 
 use Illuminate\Support\ServiceProvider;
 
