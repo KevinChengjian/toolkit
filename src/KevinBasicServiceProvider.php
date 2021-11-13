@@ -4,6 +4,10 @@ namespace Kevinchengjian\Toolkit;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class KevinBasicServiceProvider
+ * @package Kevinchengjian\Toolkit
+ */
 class KevinBasicServiceProvider extends ServiceProvider
 {
     /**
@@ -40,10 +44,13 @@ class KevinBasicServiceProvider extends ServiceProvider
             // 后台基础框架
             $this->publishes([
                 __DIR__ . '/../database/migrations' => database_path('migrations'),
+                __DIR__ . '/Enums/PmType.php' => app_path('Enums/PmType.php'),
                 __DIR__ . '/Http/Controllers/System' => app_path('Http/Controllers/System'),
                 __DIR__ . '/Http/Requests/System' => app_path('Http/Requests/System'),
                 __DIR__ . '/Models/SystemUser.php' => app_path('Models/SystemUser.php'),
                 __DIR__ . '/Models/SystemPermission.php' => app_path('Models/SystemPermission.php'),
+                __DIR__ . '/Annotations/PermissionAnnotations.php' => app_path('Annotations/PermissionAnnotations.php'),
+                __DIR__ . '/Command/ParsePermission.php' => app_path('Console/Command/ParsePermission.php')
             ], 'toolkit-system');
         }
     }

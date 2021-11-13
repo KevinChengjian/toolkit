@@ -1,0 +1,62 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespace }}\BasicController;
+use Illuminate\Http\Request;
+use App\Annotations\PermissionAnnotations;
+
+/**
+ * @PermissionAnnotations(name="")
+ * Class {{ class }}
+ * @package {{ namespace }}
+ */
+class {{ class }} extends BasicController
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @PermissionAnnotations(name="查看", type="A")
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @PermissionAnnotations(name="添加|编辑", type="A")
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @PermissionAnnotations(name="删除", type="A")
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Request $request)
+    {
+
+    }
+
+    /**
+     * query where all
+     *
+     * @PermissionAnnotations(name="全部", type="A", status="N")
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function all(Request $request)
+    {
+
+    }
+}

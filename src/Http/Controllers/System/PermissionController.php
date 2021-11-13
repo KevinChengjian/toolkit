@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\System;
 
 /**
+ *
  * Class PermissionController
  * @package App\Http\Controllers\System
  */

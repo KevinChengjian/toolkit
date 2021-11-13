@@ -6,7 +6,7 @@ namespace App\Http\Requests;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
-use Kevin\Basic\Tools\HttpResponse;
+use Kevinchengjian\Toolkit\Tools\HttpResponse;
 
 /**
  * Class AbstractRequest

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kevinchengjian\Toolkit\Enums;
+namespace App\Enums;
 
 use BenSampo\Enum\Enum;
 
@@ -19,4 +19,13 @@ final class PmType extends Enum
      * 按钮
      */
     const Action = 2;
+
+    /**
+     * @param string $type
+     * @return int
+     */
+    public static function format(string $type = 'M'): int
+    {
+        return $type == 'M' ? self::Menu : self::Action;
+    }
 }
