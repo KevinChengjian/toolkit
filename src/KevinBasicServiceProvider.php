@@ -38,7 +38,8 @@ class KevinBasicServiceProvider extends ServiceProvider
                 __DIR__ . '/Http/Requests/AbstractRequest.php' => app_path('Http/Requests/AbstractRequest.php'),
                 __DIR__ . '/Enums/Api/Message.php' => app_path('Enums/Api/Message.php'),
                 __DIR__ . '/Enums/Api/Status.php' => app_path('Enums/Api/Status.php'),
-                __DIR__ . '/Enums/Api/AuthGuard.php' => app_path('Enums/Api/AuthGuard.php')
+                __DIR__ . '/Enums/Api/AuthGuard.php' => app_path('Enums/Api/AuthGuard.php'),
+                __DIR__ . '/Enums/Status.php' => app_path('Enums/Status.php')
             ], 'toolkit-basic');
 
             // 后台基础框架
@@ -50,7 +51,7 @@ class KevinBasicServiceProvider extends ServiceProvider
                 __DIR__ . '/Models/SystemUser.php' => app_path('Models/SystemUser.php'),
                 __DIR__ . '/Models/SystemPermission.php' => app_path('Models/SystemPermission.php'),
                 __DIR__ . '/Annotations/PermissionAnnotations.php' => app_path('Annotations/PermissionAnnotations.php'),
-                __DIR__ . '/Command/ParsePermission.php' => app_path('Console/Command/ParsePermission.php')
+                __DIR__ . '/Commands/ParsePermission.php' => app_path('Console/Commands/ParsePermission.php')
             ], 'toolkit-system');
         }
     }
