@@ -28,11 +28,23 @@ class {{ class }} extends BasicController
     /**
      * Store a newly created resource in storage.
      *
-     * @PermissionAnnotations(name="添加|编辑", type="A")
+     * @PermissionAnnotations(name="添加", type="A")
      * @param Request $request
      * @return JsonResponse
      */
     public function store(Request $request): JsonResponse
+    {
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @PermissionAnnotations(name="编辑", type="A")
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function edit(Request $request): JsonResponse
     {
 
     }
