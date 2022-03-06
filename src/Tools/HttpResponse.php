@@ -39,13 +39,13 @@ class HttpResponse
     }
 
     /**
-     * @param int $code
-     * @param string $msg
+     * @param int|Status $code
+     * @param string|Message $msg
      * @param array|string|null|bool|mixed $data
      * @param array $option
      * @return JsonResponse
      */
-    public static function result($code = Status::Success, string $msg = Message::Success, $data = null, array $option = []): JsonResponse
+    public static function result(Status|int $code = Status::Success, string|Message $msg = Message::Success, $data = null, array $option = []): JsonResponse
     {
         return response()->json(
             ['code' => $code, 'msg' => $msg, 'data' => $data, 'option' => $option],
@@ -55,19 +55,19 @@ class HttpResponse
     }
 
     /**
-     * @param mixed $data
-     * @param string $msg
+     * @param array|string|null|bool|mixed $data
+     * @param string|Message $msg
      * @param array $option
      * @return JsonResponse
      */
-    public static function success($data = [], $msg = Message::Success, array $option = []): JsonResponse
+    public static function success($data = null, string|Message $msg = Message::Success, array $option = []): JsonResponse
     {
         return self::result(Status::Success, $msg, $data, $option);
     }
 
     /**
-     * @param string $msg
-     * @param null $data
+     * @param string|Message $msg
+     * @param array|string|null|bool|mixed $data
      * @param array $option
      * @return JsonResponse
      */
@@ -77,12 +77,12 @@ class HttpResponse
     }
 
     /**
-     * @param string $msg
-     * @param mixed $data
+     * @param string|Message $msg
+     * @param array|string|null|bool|mixed $data
      * @param array $option
      * @return JsonResponse
      */
-    public static function notice($msg = Message::Success, $data = [], $option = []): JsonResponse
+    public static function notice(string|Message $msg = Message::Success, $data = [], $option = []): JsonResponse
     {
         return self::result(Status::Success, $msg, $data, $option);
     }
