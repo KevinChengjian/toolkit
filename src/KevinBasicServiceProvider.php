@@ -50,8 +50,6 @@ class KevinBasicServiceProvider extends ServiceProvider
                 __DIR__ . '/Http/Requests/System' => app_path('Http/Requests/System'),
                 __DIR__ . '/Models/SystemUser.php' => app_path('Models/SystemUser.php'),
                 __DIR__ . '/Models/SystemPermission.php' => app_path('Models/SystemPermission.php'),
-                __DIR__ . '/Annotations/PermissionAnnotations.php' => app_path('Annotations/PermissionAnnotations.php'),
-                __DIR__ . '/Commands/ParsePermission.php' => app_path('Console/Commands/ParsePermission.php')
             ], 'toolkit-system');
         }
     }
