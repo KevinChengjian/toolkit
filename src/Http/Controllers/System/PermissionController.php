@@ -10,7 +10,6 @@ use App\Annotations\PermissionAnnotations;
 use Illuminate\Support\Facades\DB;
 
 /**
- * @PermissionAnnotations(name="权限管理")
  * Class PermissionController
  * @package App\Http\Controllers\System
  */
@@ -19,7 +18,6 @@ class PermissionController extends BasicController
     /**
      * Display a listing of the resource.
      *
-     * @PermissionAnnotations(name="查看", type="A")
      * @return JsonResponse
      */
     public function index()
@@ -36,7 +34,6 @@ class PermissionController extends BasicController
     /**
      * Store a newly created resource in storage.
      *
-     * @PermissionAnnotations(name="添加|编辑", type="A")
      * @param Request $request
      * @return JsonResponse
      */
@@ -79,7 +76,6 @@ class PermissionController extends BasicController
     /**
      * query where all
      *
-     * @PermissionAnnotations(name="全部", type="A", status="N")
      * @param Request $request
      * @return JsonResponse
      */

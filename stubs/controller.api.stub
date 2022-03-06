@@ -5,10 +5,8 @@ namespace {{ namespace }};
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use {{ namespace }}\BasicController;
-use App\Annotations\PermissionAnnotations;
 
 /**
- * @PermissionAnnotations(name="")
  * Class {{ class }}
  * @package {{ namespace }}
  */
@@ -17,7 +15,6 @@ class {{ class }} extends BasicController
     /**
      * Display a listing of the resource.
      *
-     * @PermissionAnnotations(name="查看", type="A")
      * @return JsonResponse
      */
     public function index(): JsonResponse
@@ -28,7 +25,6 @@ class {{ class }} extends BasicController
     /**
      * Store a newly created resource in storage.
      *
-     * @PermissionAnnotations(name="添加", type="A")
      * @param Request $request
      * @return JsonResponse
      */
@@ -40,7 +36,6 @@ class {{ class }} extends BasicController
     /**
      * Store a newly created resource in storage.
      *
-     * @PermissionAnnotations(name="编辑", type="A")
      * @param Request $request
      * @return JsonResponse
      */
@@ -52,7 +47,6 @@ class {{ class }} extends BasicController
     /**
      * Remove the specified resource from storage.
      *
-     * @PermissionAnnotations(name="删除", type="A")
      * @param Request $request
      * @return JsonResponse
      */
@@ -64,7 +58,6 @@ class {{ class }} extends BasicController
     /**
      * query where all
      *
-     * @PermissionAnnotations(name="全部", type="A", status="N")
      * @param Request $request
      * @return JsonResponse
      */
