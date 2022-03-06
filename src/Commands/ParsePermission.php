@@ -135,9 +135,9 @@ class ParsePermission extends Command
     {
         return [
             'name' => $params->name,
-            'type' => PmType::format($params->type),
+            'type' => $params->type == 'M' ? PmType::Menu : PmType::Action,
             'action' => $params->action,
-            'status' => Status::formatYesOrNo($params->status),
+            'status' => Status::Enable == $params->status ? 'Y' : 'N',
             'router' => $params->router,
             'describe' => $params->describe
         ];

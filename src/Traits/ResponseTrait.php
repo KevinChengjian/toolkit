@@ -14,23 +14,23 @@ use Kevinchengjian\Toolkit\Tools\HttpResponse;
 trait ResponseTrait
 {
     /**
-     * @param mixed $data
-     * @param string $msg
+     * @param mixed|null $data
+     * @param string|Message $msg
      * @param array $option
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function success($data = null, $msg = Message::Success, $option = []): JsonResponse
+    public function success(mixed $data = null, string|Message $msg = Message::Success, array $option = []): JsonResponse
     {
         return HttpResponse::success($data, $msg, $option);
     }
 
     /**
-     * @param string $msg
+     * @param string|Message $msg
      * @param null $data
      * @param array $option
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function error($msg = Message::Error, $data = null, $option = []): JsonResponse
+    public function error(string|Message $msg = Message::Error, $data = null, array $option = []): JsonResponse
     {
         return HttpResponse::error($msg, $data, $option);
     }
@@ -38,9 +38,9 @@ trait ResponseTrait
     /**
      * @param bool $isSuccess
      * @param mixed $msg
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function notice($isSuccess = true, $msg = null): JsonResponse
+    public function notice(bool $isSuccess = true, $msg = null): JsonResponse
     {
         return $isSuccess
             ? HttpResponse::notice($msg ?: Message::Success)
@@ -49,7 +49,7 @@ trait ResponseTrait
 
     /**
      * @param $list
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function paginate($list): JsonResponse
     {

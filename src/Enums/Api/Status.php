@@ -2,18 +2,11 @@
 
 namespace App\Enums\Api;
 
-use BenSampo\Enum\Enum;
-
-/**
- * @method static static Success ()
- * @method static static Error()
- * @method static static Unauthorized()
- */
-final class Status extends Enum
+enum Status: int
 {
-    const Success = 0;
+    case Success = 0;
 
-    const Error = 1;
+    case Error = 1;
 
-    const Unauthorized = 2;
+    case Unauthorized = 401;
 }

@@ -2,15 +2,9 @@
 
 namespace App\Enums\Api;
 
-use BenSampo\Enum\Enum;
-
-/**
- * @method static static System()
- * @method static static Client()
- */
-final class AuthGuard extends Enum
+enum AuthGuard: string
 {
-    const System = 'system';
+    case System = 'system';
 
     const Client = 'client';
 }
